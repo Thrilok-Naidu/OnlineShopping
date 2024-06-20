@@ -15,12 +15,12 @@ public class CartController {
     @Autowired
     private CartService cartService;
 
-    @GetMapping
+    @GetMapping("get/all")
     public List<Cart> getAllCarts() {
         return cartService.getAllCarts();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("get/{id}")
     public ResponseEntity<Cart> getCartById(@PathVariable String id) {
         return ResponseEntity.ok(cartService.getCartById(id));
     }

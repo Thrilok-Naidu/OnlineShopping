@@ -15,12 +15,12 @@ public class OrderController {
     @Autowired
     private OrderService orderService;
 
-    @GetMapping
+    @GetMapping("get/all")
     public List<Order> getAllOrders() {
         return orderService.getAllOrders();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("get/{id}")
     public ResponseEntity<Order> getOrderById(@PathVariable String id) {
         return ResponseEntity.ok(orderService.getOrderById(id));
     }
