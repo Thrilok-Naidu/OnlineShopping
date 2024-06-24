@@ -45,7 +45,7 @@ public class ProductController {
         return ResponseEntity.noContent().build();
     }
 
-    @GetMapping("get/page")
+    @GetMapping("/get/page")
     public Page<Product> getProductsByPage(
             @RequestParam int page,
             @RequestParam int size,
